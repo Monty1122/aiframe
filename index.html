@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aiframe.ai – Coming Soon</title>
+  <style>
+    /* Basic reset and layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #151515;
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      margin: auto;
+      padding: 0 1rem;
+    }
+
+    /* ADDED: Logo & hero image styling */
+    .logo {
+      max-width: 200px;
+      margin-bottom: 1.5rem;
+    }
+    .hero {
+      width: 100%;
+      margin: 2rem 0;
+      border-radius: 5px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      line-height: 1.5;
+      margin: 0.75rem 0 1.25rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #00cc88;
+      color: #151515;
+      padding: 0.75rem 1.25rem;
+      border-radius: 4px;
+      transition: opacity 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ADDED: Company logo -->
+    <img class="logo" src="aiframe-logo.png" alt="Aiframe AI Logo" />
+
+    <h1>Aiframe.ai</h1>
+    <p class="tagline">Elevating sales engagement with next-gen digital avatars.</p>
+
+    <!-- ADDED: Hero image -->
+    <img class="hero" src="hero.png" alt="Our Vision for AI-driven Avatars" />
+
+    <p>We’re working on something new—bringing personalized, AI-driven interactions 
+    to modern sales teams. Stay ahead of the curve with technology that blends 
+    realism and scalability.</p>
+
+    <p>Want to be the first to know more?</p>
+    <a class="btn" href="mailto:info@aiframe.ai">Get in Touch</a>
+
+    <div class="footer">
+      © <span id="year"></span> Aiframe AI – Project Under Development
+    </div>
+  </div>
+
+  <script>
+    // Simple script to display current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html> 
