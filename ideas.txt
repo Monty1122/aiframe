@@ -1,0 +1,45 @@
+
+Im creating a new stealth mode company called aiframe.ai - its going to be a company working to produce digital avatars tuned specifically for sales engagements - digital humans and for engagement from a sales person to a customer in replacement of a video recording of a sales person presenting a product - I want to create a website for the company in stealth mode - what ideas do you have for what I could show on the website to give away just a little of what the company will do?
+
+For a stealth mode website, you’ll want to strike the right balance between intrigue and discretion. Here are some ideas for what you could include:
+
+1. Minimalist Design
+	•	Use a sleek, modern design with clean lines, a dark or neutral color palette, and subtle animations to give the impression of innovation and sophistication.
+
+2. Teaser Messaging
+	•	Include a tagline like:
+“Redefining Sales Engagement with the Power of AI”
+“The Future of Digital Sales is Human… Almost”
+
+3. Hero Section
+	•	A single impactful image or animation, such as a digital avatar silhouette or abstract AI-related visuals, to hint at your focus on humanized AI.
+
+4. Problem Statement
+	•	A section like:
+“Traditional sales presentations lack personalization and engagement. We’re changing that with cutting-edge technology designed to connect.”
+
+5. Call to Action
+	•	Invite visitors to stay informed without revealing too much:
+“Join the journey. Sign up to stay updated as we unveil the future of sales engagements.”
+Add a simple email capture form.
+
+6. Placeholder Features
+	•	Use vague but exciting terms like:
+	•	“Hyper-personalized Digital Engagement”
+	•	“AI-Powered Human Connection”
+	•	“Seamless Sales Presentations, Redefined”
+
+7. FAQ Section (Subtle but Informative)
+	•	Use ambiguous questions like:
+	•	“Is this AI or magic? (Hint: Both.)”
+	•	“How will this change the way you sell?”
+
+8. Logo and Branding
+	•	Display the aiframe.ai logo prominently but subtly, with just enough branding to establish identity without giving away full details.
+
+9. Contact Information
+	•	A professional email or form for potential early adopters or investors to reach out. Use phrasing like:
+“Curious? We’d love to hear from you.”
+
+10. Subtle Animation or Easter Egg
+	•	Add a small interactive element (e.g., hovering over a text reveals a clue like “#humanizingAI”).
