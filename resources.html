@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources - Aiframe.ai</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* Additional page-specific styles */
+    .resources-nav {
+      display: flex;
+      justify-content: center;
+      margin: 3rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .resources-nav-item {
+      padding: 1rem 2rem;
+      margin: 0 0.5rem;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .resources-nav-item.active {
+      color: var(--primary);
+      border-bottom: 3px solid var(--primary);
+    }
+    
+    .resource-section {
+      display: none;
+    }
+    
+    .resource-section.active {
+      display: block;
+    }
+    
+    /* FAQ Styles */
+    .faq-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .faq-item h3 {
+      cursor: pointer;
+      position: relative;
+      padding-right: 30px;
+    }
+    
+    .faq-item h3:after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+    .faq-item.open h3:after {
+      content: '-';
+    }
+    
+    .faq-answer {
+      margin-top: 1rem;
+      display: none;
+    }
+    
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+    
+    /* Blog Styles */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .blog-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .blog-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .blog-content {
+      padding: 1.5rem;
+    }
+    
+    .blog-meta {
+      color: var(--gray);
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Knowledge Base Styles */
+    .kb-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .kb-category {
+      padding: 1.5rem;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .kb-category-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .kb-articles {
+      margin-top: 1rem;
+    }
+    
+    .kb-article {
+      margin-bottom: 0.5rem;
+    }
+    
+    .kb-article a {
+      text-decoration: none;
+      color: var(--text);
+      transition: color 0.3s ease;
+    }
+    
+    .kb-article a:hover {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="/">
+          <img src="aiframe-logo.png" alt="Aiframe AI Logo" class="logo" />
+        </a>
+        <button class="mobile-nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/how-it-works.html">How It Works</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="https://portal.aiframe.ai" class="btn">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Resources & Knowledge Center</h1>
+        <p>Find answers, explore insights, and learn how to make the most of Aiframe's AI avatar technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Navigation -->
+  <div class="container">
+    <div class="resources-nav">
+      <div class="resources-nav-item active" data-target="faq">FAQ</div>
+      <div class="resources-nav-item" data-target="blog">Blog</div>
+      <div class="resources-nav-item" data-target="knowledge-base">Knowledge Base</div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="resource-section active">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Got questions? Check out answers to our most common inquiries below. If you don't see your question, feel free to contact us.</p>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>Is it really my own voice?</h3>
+          <div class="faq-answer">
+            <p>Yes! We model your exact voice and then refine it. Your avatar sounds just like you—but we optimize pacing and clarity for better engagement. Our AI preserves your unique vocal characteristics while removing common issues like filler words and hesitations.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How secure is my data?</h3>
+          <div class="faq-answer">
+            <p>We use industry-standard encryption and comply with relevant data protection laws. Only you control how you share your avatar videos. All uploads are encrypted in transit and at rest, and we never use your content to train our models without explicit permission.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Can I edit my script or audio after uploading?</h3>
+          <div class="faq-answer">
+            <p>Absolutely. You can revise your script or translate to multiple languages without re-recording. Our AI will regenerate your avatar video with the updated content while maintaining your visual and vocal style.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Is it possible to create a live avatar?</h3>
+          <div class="faq-answer">
+            <p>Currently, our platform supports pre-recorded videos. Live avatar capability is on our roadmap for future releases. We're actively working on reducing the processing time to enable near-real-time avatar generation.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How many videos can I create?</h3>
+          <div class="faq-answer">
+            <p>The number of videos you can create depends on your subscription plan. Our Basic plan includes 5 transformations per month, while our Pro plan offers unlimited transformations. Enterprise plans can be customized to your specific needs.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What languages are supported?</h3>
+          <div class="faq-answer">
+            <p>The Basic plan supports English only. Our Pro plan supports 10 major languages, including English, Spanish, French, German, Chinese, Japanese, Italian, Portuguese, Dutch, and Russian. Enterprise plans include all available languages (20+ and growing).</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do I own the content I create?</h3>
+          <div class="faq-answer">
+            <p>Yes, you retain full ownership of all content created using our platform. You're free to use, share, and distribute your avatar videos as you see fit, in accordance with our Terms of Service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="resource-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Insights, Updates & AI Trends</h2>
+        <p>Dive into expert insights on sales presentations, avatar technology, and the latest in AI innovation. Explore how you can elevate your brand with cutting-edge video solutions.</p>
+      </div>
+      
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-image" style="background-image: url('blog-sales.jpg');"></div>
+          <div class="blog-content">
+            <div class="blog-meta">March 15, 2023 • 5 min read</div>
+            <h3>5 Ways to Close More Deals with Avatar Sales Videos</h3>
+            <p>Learn how top-performing sales teams are using AI avatars to increase engagement rates and close more deals.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+          </div>
+        </div>
+        
+        <div class="blog-card">
+          <div class="blog-image" style="background-image: url('blog-future.jpg');"></div>
+          <div class="blog-content">
+            <div class="blog-meta">February 28, 2023 • 8 min read</div>
+            <h3>The Future of Video: Why AI-Generated Content Is Here to Stay</h3>
+            <p>Explore the rapidly evolving landscape of AI-generated video content and its implications for marketing and sales.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+          </div>
+        </div>
+        
+        <div class="blog-card">
+          <div class="blog-image" style="background-image: url('blog-global.jpg');"></div>
+          <div class="blog-content">
+            <div class="blog-meta">January 12, 2023 • 6 min read</div>
+            <h3>How to Go Global Overnight with Automated Translation</h3>
+            <p>Discover how AI-powered translation can help you expand your market reach without additional production costs.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Knowledge Base Section -->
+  <section id="knowledge-base" class="resource-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Self-Help Center & Technical Documentation</h2>
+        <p>Our Knowledge Base is here to guide you through every step—from basic setup to advanced avatar customizations.</p>
+      </div>
+      
+      <div class="kb-categories">
+        <div class="kb-category">
+          <div class="kb-category-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Getting Started</h3>
+          <p>Step-by-step onboarding guides</p>
+          <div class="kb-articles">
+            <div class="kb-article">
+              <a href="#">Creating Your First Avatar</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Account Setup & Preferences</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Best Practices for Video Uploads</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Understanding Your Dashboard</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="kb-category">
+          <div class="kb-category-icon">
+            <i class="fas fa-edit"></i>
+          </div>
+          <h3>Advanced Editing</h3>
+          <p>Master the editing tools</p>
+          <div class="kb-articles">
+            <div class="kb-article">
+              <a href="#">Script Optimization Techniques</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Custom Gestures & Expressions</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Accent Modulation & Tone Control</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Fine-tuning Pacing & Emphasis</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="kb-category">
+          <div class="kb-category-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Translation & Localization</h3>
+          <p>Reach global audiences</p>
+          <div class="kb-articles">
+            <div class="kb-article">
+              <a href="#">Supported Languages & Dialects</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Cultural Adaptation Guide</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Multilingual Campaign Management</a>
+            </div>
+            <div class="kb-article">
+              <a href="#">Regional Optimization Tips</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html> 

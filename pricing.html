@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing - Aiframe.ai</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* Additional page-specific styles */
+    .pricing-toggle {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    
+    .toggle-option {
+      padding: 0.5rem 1.5rem;
+      cursor: pointer;
+      border: 1px solid var(--primary);
+    }
+    
+    .toggle-option:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+    
+    .toggle-option:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+    
+    .toggle-option.active {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .pricing-badge {
+      display: inline-block;
+      background-color: #ffae00;
+      color: white;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    
+    .price-detail {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+    
+    .save-text {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--primary);
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="/">
+          <img src="aiframe-logo.png" alt="Aiframe AI Logo" class="logo" />
+        </a>
+        <button class="mobile-nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/how-it-works.html">How It Works</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="https://portal.aiframe.ai" class="btn">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Straightforward Plans for Every Team</h1>
+        <p>Start with a free trial—no credit card required. Upgrade anytime for more features and flexibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Toggle -->
+  <section class="pricing">
+    <div class="container">
+      <div class="pricing-toggle">
+        <div class="toggle-option active" id="monthly">Monthly</div>
+        <div class="toggle-option" id="annual">Annual</div>
+      </div>
+
+      <!-- Pricing Plans -->
+      <div class="pricing-grid">
+        <!-- Basic Plan -->
+        <div class="pricing-plan">
+          <h3 class="pricing-title">Basic</h3>
+          <p>Perfect for individual creators</p>
+          <div class="pricing-price" id="basic-price">
+            $29<span class="price-detail">/month</span>
+          </div>
+          <a href="/sign-up.html" class="btn">Start Free Trial</a>
+          <ul class="pricing-features">
+            <li>Up to 5 avatar transformations / month</li>
+            <li>Standard resolution exports (720p)</li>
+            <li>Basic script editing</li>
+            <li>Email support</li>
+            <li>Single user account</li>
+          </ul>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="pricing-plan">
+          <h3 class="pricing-title">Pro <span class="pricing-badge">Popular</span></h3>
+          <p>Ideal for sales professionals</p>
+          <div class="pricing-price" id="pro-price">
+            $79<span class="price-detail">/month</span>
+          </div>
+          <a href="/sign-up.html" class="btn">Upgrade to Pro</a>
+          <ul class="pricing-features">
+            <li>Unlimited transformations</li>
+            <li>HD exports (1080p)</li>
+            <li>Advanced editing tools</li>
+            <li>10 languages for translation</li>
+            <li>Priority rendering</li>
+            <li>Priority email support</li>
+          </ul>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-plan">
+          <h3 class="pricing-title">Enterprise</h3>
+          <p>For teams and organizations</p>
+          <div class="pricing-price">
+            Custom<span class="price-detail"></span>
+          </div>
+          <a href="/contact.html" class="btn">Contact Us</a>
+          <ul class="pricing-features">
+            <li>Custom usage limits</li>
+            <li>4K video export option</li>
+            <li>API integration</li>
+            <li>Team collaboration features</li>
+            <li>All languages supported</li>
+            <li>Dedicated account manager</li>
+            <li>Custom branding options</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="pricing-disclaimer">
+        <p>All plans come with top-tier data security and ongoing updates. Cancel or change your plan anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Comparison -->
+  <section class="feature-comparison">
+    <div class="container">
+      <div class="section-header">
+        <h2>Compare Features</h2>
+      </div>
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Basic</th>
+              <th>Pro</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Avatar Transformations</td>
+              <td>5 / month</td>
+              <td>Unlimited</td>
+              <td>Custom</td>
+            </tr>
+            <tr>
+              <td>Video Quality</td>
+              <td>720p</td>
+              <td>1080p</td>
+              <td>Up to 4K</td>
+            </tr>
+            <tr>
+              <td>Script Editing</td>
+              <td>Basic</td>
+              <td>Advanced</td>
+              <td>Advanced</td>
+            </tr>
+            <tr>
+              <td>Languages</td>
+              <td>English only</td>
+              <td>10 languages</td>
+              <td>All languages</td>
+            </tr>
+            <tr>
+              <td>Support</td>
+              <td>Email</td>
+              <td>Priority Email</td>
+              <td>Dedicated Manager</td>
+            </tr>
+            <tr>
+              <td>Users</td>
+              <td>1</td>
+              <td>1</td>
+              <td>Multiple</td>
+            </tr>
+            <tr>
+              <td>API Access</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Custom Branding</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="pricing-faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Can I upgrade or downgrade my plan?</h3>
+          <p>Yes, you can change your plan at any time. Changes take effect at the start of your next billing cycle.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is there a free trial?</h3>
+          <p>Yes, all plans start with a 14-day free trial with no credit card required.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How does billing work?</h3>
+          <p>We offer both monthly and annual billing options. Annual plans come with a discount equivalent to two months free.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What payment methods do you accept?</h3>
+          <p>We accept all major credit cards, as well as PayPal. For Enterprise plans, we can also accommodate invoicing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Sales Presentations?</h2>
+        <p>Start your free trial today and experience the power of AI-driven avatars.</p>
+        <a href="/sign-up.html" class="btn btn-large">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Aiframe</h3>
+          <p>Next-generation AI avatars for sales teams.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/how-it-works.html">How It Works</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="/resources.html#faq">FAQ</a></li>
+            <li><a href="/resources.html#blog">Blog</a></li>
+            <li><a href="/resources.html#knowledge-base">Knowledge Base</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/about.html#team">Team</a></li>
+            <li><a href="/about.html#careers">Careers</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© <span id="year"></span> Aiframe AI – All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Pricing toggle functionality
+    const monthlyToggle = document.getElementById('monthly');
+    const annualToggle = document.getElementById('annual');
+    const basicPrice = document.getElementById('basic-price');
+    const proPrice = document.getElementById('pro-price');
+    
+    monthlyToggle.addEventListener('click', () => {
+      monthlyToggle.classList.add('active');
+      annualToggle.classList.remove('active');
+      basicPrice.innerHTML = '$29<span class="price-detail">/month</span>';
+      proPrice.innerHTML = '$79<span class="price-detail">/month</span>';
+    });
+    
+    annualToggle.addEventListener('click', () => {
+      annualToggle.classList.add('active');
+      monthlyToggle.classList.remove('active');
+      basicPrice.innerHTML = '$24<span class="price-detail">/month</span><span class="save-text">Save $60/year</span>';
+      proPrice.innerHTML = '$66<span class="price-detail">/month</span><span class="save-text">Save $156/year</span>';
+    });
+  </script>
+</body>
+</html> 

@@ -3,117 +3,321 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aiframe.ai – Coming Soon</title>
-  <style>
-    /* Basic reset and layout */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #151515;
-      color: #f5f5f5;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      text-align: center;
-      max-width: 600px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .logo {
-      max-width: 200px;
-      margin-bottom: 1.5rem;
-    }
-    .hero {
-      width: 100%;
-      margin: 2rem 0;
-      border-radius: 5px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-    }
-
-    p {
-      line-height: 1.5;
-      margin: 0.75rem 0 1.25rem;
-    }
-
-    .tagline {
-      font-size: 1.1rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background-color: #00cc88;
-      color: #151515;
-      padding: 0.75rem 1.25rem;
-      border-radius: 4px;
-      transition: opacity 0.3s;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      opacity: 0.8;
-    }
-
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.875rem;
-      color: #888;
-    }
-  </style>
+  <title>Aiframe.ai - AI-Driven Avatars for Sales Teams</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-  <div class="container">
-    <!-- Logo -->
-    <img class="logo" src="aiframe-logo.png" alt="Aiframe AI Logo" />
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="/">
+          <img src="aiframe-logo.png" alt="Aiframe AI Logo" class="logo" />
+        </a>
+        <button class="mobile-nav-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/how-it-works.html">How It Works</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="https://portal.aiframe.ai" class="btn">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h1>Aiframe.ai</h1>
-    <p class="tagline">Elevating sales engagement with next-gen digital avatars.</p>
-
-    <!-- Hero image -->
-    <img class="hero" src="hero.png" alt="Our Vision for AI-driven Avatars" />
-
-    <p>
-      We’re working on something new—bringing personalized, AI-driven interactions 
-      to modern sales teams. Stay ahead of the curve with technology that blends 
-      realism and scalability.
-    </p>
-    
-    <p>
-      Building on our proprietary AI models, Aiframe is crafting digital avatars 
-      that adapt to each seller’s unique style, delivering personalized demo 
-      experiences in real time. We’re here to help your team engage customers 
-      like never before—driving measurable results and real business success.
-    </p>
-
-    <p>Want to be the first to know more?</p>
-    <a class="btn" href="mailto:info@aiframe.ai">Get in Touch</a>
-
-    <div class="footer">
-      © <span id="year"></span> Aiframe AI – Project Under Development
-      <div style="margin-top: 1rem;">
-        <a href="/privacy-policy.html" style="color: #888; margin-right: 1rem; text-decoration: none;">Privacy Policy</a>
-        <a href="/terms-of-service.html" style="color: #888; text-decoration: none;">Terms of Service</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Elevate Your Sales Pitch with Personalized AI-Driven Avatars</h1>
+        <p>Say goodbye to filler words, awkward pauses, and monotone deliveries. Aiframe transforms your real videos into polished, persuasive demos—optimized for modern sales teams.</p>
+        <a href="#early-access" class="btn btn-large">Request Early Access</a>
+        <img src="hero.png" alt="Aiframe AI Hero" class="hero-image">
+      </div>
+      
+      <div class="comparison">
+        <h2>Transform Your Video Presentations</h2>
+        
+        <div class="comparison-image-container">
+          <div class="comparison-image">
+            <div class="image-side">
+              <h4>Before: (Real video submission) 👎</h4>
+              <div class="video-thumbnail left-thumbnail">
+                <div class="point-list">
+                  <p>First 20 seconds of bad response</p>
+                  <ul>
+                    <li>Too many pauses</li>
+                    <li>Uhh umm...</li>
+                    <li>Bad eye contact</li>
+                    <li>Closed body language</li>
+                    <li>Monotone</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="image-side">
+              <h4>After: (AI generated converted response) 👍</h4>
+              <div class="video-thumbnail right-thumbnail">
+                <div class="point-list">
+                  <p>First 30 sec of better response</p>
+                  <ul>
+                    <li>To the point</li>
+                    <li>Smooth</li>
+                    <li>Good Eye contact</li>
+                    <li>Opened body language</li>
+                    <li>Better wording</li>
+                    <li>Better Tonality</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comparison-grid">
+          <div class="before">
+            <h3>What We Fix</h3>
+            <ul>
+              <li><strong>Filler Words:</strong> Remove "umm," "uh," and other verbal distractions</li>
+              <li><strong>Monotone Delivery:</strong> Add variety and energy to your speaking voice</li>
+              <li><strong>Awkward Pauses:</strong> Create smooth, continuous delivery</li>
+              <li><strong>Poor Eye Contact:</strong> Generate direct, confident gaze</li>
+              <li><strong>Closed Body Language:</strong> Open up posture for better engagement</li>
+            </ul>
+          </div>
+          <div class="after">
+            <h3>Benefits</h3>
+            <ul>
+              <li><strong>Higher Engagement:</strong> Keep prospects watching longer</li>
+              <li><strong>Better Conversions:</strong> Increase meeting bookings from video outreach</li>
+              <li><strong>Time Savings:</strong> No more endless retakes and editing</li>
+              <li><strong>Consistent Quality:</strong> Every presentation is optimized</li>
+              <li><strong>Global Reach:</strong> Translate content without losing your voice</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- Value Proposition -->
+  <section class="value-prop">
+    <div class="container">
+      <div class="section-header">
+        <h2>Transform Your Pitch with Advanced AI</h2>
+      </div>
+      <div class="value-content">
+        <p>We're working on something new—bringing personalized, AI-driven interactions to modern sales teams. Stay ahead of the curve with technology that blends realism and scalability. Building on our proprietary AI models, Aiframe is crafting digital avatars that adapt to each seller's unique style, delivering personalized demo experiences in real time. We're here to help your team engage customers like never before—driving measurable results and real business success.</p>
+        
+        <p>We've combined advanced AI and a massive dataset of proven sales techniques to help you deliver unforgettable video presentations. Simply upload your existing video, let our AI enhance your speaking style, and instantly get a polished avatar video ready to share on YouTube, TikTok, or in a sales demo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Highlights -->
+  <section class="highlights">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Ultra-realistic lip-sync, gestures, and tone</h3>
+          <p>Our advanced AI precisely matches lip movements and facial expressions to deliver natural-looking video presentations.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-fingerprint"></i>
+          </div>
+          <h3>Tailored to your personal style and voice</h3>
+          <p>Your digital avatar preserves your unique speaking style while removing the imperfections and hesitations.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-language"></i>
+          </div>
+          <h3>Script editing and multi-language translation</h3>
+          <p>Easily edit your message or translate it into multiple languages while maintaining your authentic voice.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Trusted by sales teams worldwide</h3>
+          <p>Join hundreds of sales professionals who are already using Aiframe to close more deals and save time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">
+          <p>"Our close rates improved by 30% after integrating avatar demos into our sales workflow. Clients love how polished it looks!"</p>
+        </div>
+        <div class="testimonial-author">
+          <p><strong>Jordan</strong>, Sales Manager</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Early Access Form -->
+  <section id="early-access" class="early-access">
+    <div class="container">
+      <div class="section-header">
+        <h2>Request Early Access</h2>
+        <p>Be among the first to experience how Aiframe can transform your sales presentations</p>
+      </div>
+      <div class="contact-form">
+        <form id="earlyAccessForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company (Optional)</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="message">How would you use Aiframe? (Optional)</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-large">Request Early Access</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Sales Presentations?</h2>
+        <p>Join the waitlist today and be the first to know when we launch.</p>
+        <a href="#early-access" class="btn btn-large">Try It Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Aiframe</h3>
+          <p>Next-generation AI avatars for sales teams.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/how-it-works.html">How It Works</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="/resources.html#faq">FAQ</a></li>
+            <li><a href="/resources.html#blog">Blog</a></li>
+            <li><a href="/resources.html#knowledge-base">Knowledge Base</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/about.html#team">Team</a></li>
+            <li><a href="/about.html#careers">Careers</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© <span id="year"></span> Aiframe AI – All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script>
-    // Display current year
+    // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Early access form submission
+    const earlyAccessForm = document.getElementById('earlyAccessForm');
+    
+    earlyAccessForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      
+      const formData = {
+        name: earlyAccessForm.name.value,
+        email: earlyAccessForm.email.value,
+        company: earlyAccessForm.company.value,
+        message: earlyAccessForm.message.value,
+        location: navigator.language || 'unknown'
+      };
+      
+      try {
+        // In a real implementation, this would send data to your backend
+        // For now, let's simulate success
+        console.log('Form data:', formData);
+        
+        // Email that would be sent to aiframesoftware@gmail.com
+        const emailContent = `
+          New Early Access Request:
+          Name: ${formData.name}
+          Email: ${formData.email}
+          Company: ${formData.company || 'Not provided'}
+          Message: ${formData.message || 'Not provided'}
+          Browser Location: ${formData.location}
+        `;
+        
+        console.log('Email content:', emailContent);
+        
+        // Show success message
+        alert('Thanks for your interest! We\'ll be in touch soon.');
+        earlyAccessForm.reset();
+      } catch (error) {
+        alert('Oops! Something went wrong. Please try again later.');
+      }
+    });
   </script>
 </body>
 </html> 
