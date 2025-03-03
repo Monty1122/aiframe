@@ -3,32 +3,253 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aiframe.ai - AI-Driven Avatars for Sales Teams</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <title>Aiframe.ai - AI Avatars for Sales (Stealth Mode)</title>
+  <style>
+    :root {
+      --primary: #00cc88;
+      --dark: #151515;
+      --light: #f5f5f5;
+      --gray: #888;
+      --light-gray: #f0f0f0;
+      --text: #333;
+      --font-main: 'Inter', Arial, sans-serif;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-main);
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    /* Typography */
+    h1, h2, h3 {
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: white;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00cc88, #36f1cd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+      color: #f5f5f5;
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+      color: #cccccc;
+      font-size: 1.1rem;
+    }
+    
+    /* Header */
+    header {
+      padding: 1.5rem 0;
+    }
+    
+    .logo {
+      height: 40px;
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 6rem 0;
+      text-align: center;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero-image {
+      max-width: 90%;
+      margin: 3rem auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 204, 136, 0.2);
+      display: block;
+    }
+    
+    /* Benefits */
+    .benefits {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 4rem 0;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    
+    .benefits-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: #eee;
+    }
+    
+    .benefits-list li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+      font-size: 1.1rem;
+    }
+    
+    .benefits-list li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    
+    /* Before/After */
+    .teaser {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 3rem 0;
+      border-left: 4px solid var(--primary);
+    }
+    
+    /* CTA */
+    .cta {
+      margin: 4rem 0;
+      text-align: center;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(90deg, #00cc88, #36f1cd);
+      color: var(--dark);
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(0, 204, 136, 0.3);
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 204, 136, 0.4);
+    }
+    
+    /* Form */
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #eee;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      color: white;
+      font-family: var(--font-main);
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 2rem 0;
+      margin-top: auto;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-text {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+    
+    .stealth-badge {
+      display: inline-block;
+      padding: 0.25rem 1rem;
+      background-color: rgba(0, 204, 136, 0.1);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      margin-left: 1rem;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .hero {
+        padding: 4rem 0;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .stealth-badge {
+        margin: 1rem 0 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Header & Navigation -->
+  <!-- Header -->
   <header>
     <div class="container">
-      <nav class="navbar">
-        <a href="/">
-          <img src="aiframe-logo.png" alt="Aiframe AI Logo" class="logo" />
-        </a>
-        <button class="mobile-nav-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/features.html">Features</a></li>
-          <li><a href="/how-it-works.html">How It Works</a></li>
-          <li><a href="/pricing.html">Pricing</a></li>
-          <li><a href="/resources.html">Resources</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="https://portal.aiframe.ai" class="btn">Login</a></li>
-        </ul>
-      </nav>
+      <img src="aiframe-logo.png" alt="Aiframe.ai Logo" class="logo" />
     </div>
   </header>
 
@@ -36,155 +257,40 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Elevate Your Sales Pitch with Personalized AI-Driven Avatars</h1>
-        <p>Say goodbye to filler words, awkward pauses, and monotone deliveries. Aiframe transforms your real videos into polished, persuasive demos—optimized for modern sales teams.</p>
-        <a href="#early-access" class="btn btn-large">Request Early Access</a>
-        <img src="hero.png" alt="Aiframe AI Hero" class="hero-image">
-      </div>
-      
-      <div class="comparison">
-        <h2>Transform Your Video Presentations</h2>
+        <h1>Transform Your Sales Pitch with Personalized AI Avatars</h1>
+        <h2>We're building next-generation video technology that adapts to your style—delivering pitch-perfect demos and presentations in real time.</h2>
         
-        <div class="comparison-image-container">
-          <div class="comparison-image">
-            <div class="image-side">
-              <h4>Before: (Real video submission) 👎</h4>
-              <div class="video-thumbnail left-thumbnail">
-                <div class="point-list">
-                  <p>First 20 seconds of bad response</p>
-                  <ul>
-                    <li>Too many pauses</li>
-                    <li>Uhh umm...</li>
-                    <li>Bad eye contact</li>
-                    <li>Closed body language</li>
-                    <li>Monotone</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="image-side">
-              <h4>After: (AI generated converted response) 👍</h4>
-              <div class="video-thumbnail right-thumbnail">
-                <div class="point-list">
-                  <p>First 30 sec of better response</p>
-                  <ul>
-                    <li>To the point</li>
-                    <li>Smooth</li>
-                    <li>Good Eye contact</li>
-                    <li>Opened body language</li>
-                    <li>Better wording</li>
-                    <li>Better Tonality</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <p>At Aiframe, we're reimagining how modern sales teams connect with customers. Our proprietary AI model takes your raw video footage and refines it into a polished, persuasive avatar—eliminating filler words, awkward pauses, and monotone deliveries. Think of it as your personal sales coach and video production studio in one powerful platform.</p>
+        
+        <img src="hero.png" alt="Aiframe AI Technology Preview" class="hero-image">
+        
+        <div class="benefits">
+          <h2>Key Benefits</h2>
+          <ul class="benefits-list">
+            <li><strong>Boost Engagement:</strong> Deliver crisp, compelling presentations that captivate from the first second.</li>
+            <li><strong>Cut Production Time:</strong> Update scripts and messaging without reshooting endless takes.</li>
+            <li><strong>Own Your Voice & Style:</strong> Maintain your unique presence while gaining data-driven enhancements.</li>
+            <li><strong>Scale Effortlessly:</strong> Produce multiple language versions or targeted pitches in minutes.</li>
+          </ul>
         </div>
         
-        <div class="comparison-grid">
-          <div class="before">
-            <h3>What We Fix</h3>
-            <ul>
-              <li><strong>Filler Words:</strong> Remove "umm," "uh," and other verbal distractions</li>
-              <li><strong>Monotone Delivery:</strong> Add variety and energy to your speaking voice</li>
-              <li><strong>Awkward Pauses:</strong> Create smooth, continuous delivery</li>
-              <li><strong>Poor Eye Contact:</strong> Generate direct, confident gaze</li>
-              <li><strong>Closed Body Language:</strong> Open up posture for better engagement</li>
-            </ul>
-          </div>
-          <div class="after">
-            <h3>Benefits</h3>
-            <ul>
-              <li><strong>Higher Engagement:</strong> Keep prospects watching longer</li>
-              <li><strong>Better Conversions:</strong> Increase meeting bookings from video outreach</li>
-              <li><strong>Time Savings:</strong> No more endless retakes and editing</li>
-              <li><strong>Consistent Quality:</strong> Every presentation is optimized</li>
-              <li><strong>Global Reach:</strong> Translate content without losing your voice</li>
-            </ul>
-          </div>
+        <div class="teaser">
+          <h2>See the Difference</h2>
+          <p>"Our AI unlocks a smoother, more confident version of your pitch. Compare your initial recording to our transformed avatar output and see the difference—better eye contact, open body language, and persuasive tonality."</p>
+        </div>
+        
+        <div class="stealth-note">
+          <p>We can't share every detail yet, but rest assured: Aiframe is designing the future of interactive sales experiences.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Value Proposition -->
-  <section class="value-prop">
+  <!-- CTA & Form Section -->
+  <section class="cta" id="early-access">
     <div class="container">
-      <div class="section-header">
-        <h2>Transform Your Pitch with Advanced AI</h2>
-      </div>
-      <div class="value-content">
-        <p>We're working on something new—bringing personalized, AI-driven interactions to modern sales teams. Stay ahead of the curve with technology that blends realism and scalability. Building on our proprietary AI models, Aiframe is crafting digital avatars that adapt to each seller's unique style, delivering personalized demo experiences in real time. We're here to help your team engage customers like never before—driving measurable results and real business success.</p>
-        
-        <p>We've combined advanced AI and a massive dataset of proven sales techniques to help you deliver unforgettable video presentations. Simply upload your existing video, let our AI enhance your speaking style, and instantly get a polished avatar video ready to share on YouTube, TikTok, or in a sales demo.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Key Highlights -->
-  <section class="highlights">
-    <div class="container">
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-sync-alt"></i>
-          </div>
-          <h3>Ultra-realistic lip-sync, gestures, and tone</h3>
-          <p>Our advanced AI precisely matches lip movements and facial expressions to deliver natural-looking video presentations.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-fingerprint"></i>
-          </div>
-          <h3>Tailored to your personal style and voice</h3>
-          <p>Your digital avatar preserves your unique speaking style while removing the imperfections and hesitations.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-language"></i>
-          </div>
-          <h3>Script editing and multi-language translation</h3>
-          <p>Easily edit your message or translate it into multiple languages while maintaining your authentic voice.</p>
-        </div>
-        
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3>Trusted by sales teams worldwide</h3>
-          <p>Join hundreds of sales professionals who are already using Aiframe to close more deals and save time.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <h2>What Our Customers Say</h2>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-text">
-          <p>"Our close rates improved by 30% after integrating avatar demos into our sales workflow. Clients love how polished it looks!"</p>
-        </div>
-        <div class="testimonial-author">
-          <p><strong>Jordan</strong>, Sales Manager</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Early Access Form -->
-  <section id="early-access" class="early-access">
-    <div class="container">
-      <div class="section-header">
-        <h2>Request Early Access</h2>
-        <p>Be among the first to experience how Aiframe can transform your sales presentations</p>
-      </div>
-      <div class="contact-form">
+      <h2>Stay in the Loop</h2>
+      <div class="form-container">
         <form id="earlyAccessForm">
           <div class="form-group">
             <label for="name">Name</label>
@@ -198,23 +304,8 @@
             <label for="company">Company (Optional)</label>
             <input type="text" id="company" name="company">
           </div>
-          <div class="form-group">
-            <label for="message">How would you use Aiframe? (Optional)</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn btn-large">Request Early Access</button>
+          <button type="submit" class="btn">Request Early Access</button>
         </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="cta">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Transform Your Sales Presentations?</h2>
-        <p>Join the waitlist today and be the first to know when we launch.</p>
-        <a href="#early-access" class="btn btn-large">Try It Now</a>
       </div>
     </div>
   </section>
@@ -223,100 +314,34 @@
   <footer>
     <div class="container">
       <div class="footer-content">
-        <div class="footer-column">
-          <h3>Aiframe</h3>
-          <p>Next-generation AI avatars for sales teams.</p>
-        </div>
-        <div class="footer-column">
-          <h3>Explore</h3>
-          <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/features.html">Features</a></li>
-            <li><a href="/how-it-works.html">How It Works</a></li>
-            <li><a href="/pricing.html">Pricing</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Resources</h3>
-          <ul class="footer-links">
-            <li><a href="/resources.html#faq">FAQ</a></li>
-            <li><a href="/resources.html#blog">Blog</a></li>
-            <li><a href="/resources.html#knowledge-base">Knowledge Base</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Company</h3>
-          <ul class="footer-links">
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="/about.html#team">Team</a></li>
-            <li><a href="/about.html#careers">Careers</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Legal</h3>
-          <ul class="footer-links">
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="/terms-of-service.html">Terms of Service</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>© <span id="year"></span> Aiframe AI – All rights reserved</p>
+        <div class="footer-text">&copy; 2023 Aiframe.ai - All Rights Reserved</div>
+        <div class="stealth-badge">In Stealth Mode</div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Update year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-    
-    // Early access form submission
-    const earlyAccessForm = document.getElementById('earlyAccessForm');
-    
-    earlyAccessForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
+    document.getElementById('earlyAccessForm').addEventListener('submit', function(e) {
+      e.preventDefault();
       
-      const formData = {
-        name: earlyAccessForm.name.value,
-        email: earlyAccessForm.email.value,
-        company: earlyAccessForm.company.value,
-        message: earlyAccessForm.message.value,
-        location: navigator.language || 'unknown'
-      };
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const company = document.getElementById('company').value;
       
-      try {
-        // In a real implementation, this would send data to your backend
-        // For now, let's simulate success
-        console.log('Form data:', formData);
-        
-        // Email that would be sent to aiframesoftware@gmail.com
-        const emailContent = `
-          New Early Access Request:
-          Name: ${formData.name}
-          Email: ${formData.email}
-          Company: ${formData.company || 'Not provided'}
-          Message: ${formData.message || 'Not provided'}
-          Browser Location: ${formData.location}
-        `;
-        
-        console.log('Email content:', emailContent);
-        
-        // Show success message
-        alert('Thanks for your interest! We\'ll be in touch soon.');
-        earlyAccessForm.reset();
-      } catch (error) {
-        alert('Oops! Something went wrong. Please try again later.');
-      }
+      // Here you would typically send this data to your server
+      // For stealth mode, consider a simple email forwarding solution
+      
+      // For now, just show a thank you message
+      this.innerHTML = `
+        <div style="text-align: center; padding: 2rem;">
+          <h2 style="color: var(--primary);">Thank You!</h2>
+          <p>We've received your request for early access. We'll be in touch soon with more information.</p>
+        </div>
+      `;
+      
+      // Log to console (for development purposes)
+      console.log(`Early Access Request: ${name}, ${email}, ${company}`);
     });
   </script>
 </body>
